@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{bold-extra}
+
+\setlength\parskip{1em plus 0.1em minus 0.2em}
+%\setlength\parindent{0pt}
+
+\geometry{a4paper, top=6em, bottom=6em, left=6em, right=6em}
+
+% Defines the distance between each line in the TOC.
+\setlength{\cftbeforesecskip}{8pt}
+
+% Sets the indentation between section number and title in the TOC.
+\cftsetindents{section}{0em}{2em}
+
+% Adds a row of dots filling the space in the TOC.
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Adds a dot after section numbers in the TOC.
+\renewcommand{\cftsecaftersnum}{.}
+
+% Makes an unnumbered section and adds it to the TOC.
+\newcommand{\unnumberedsection}[1]{%
+	\section*{#1%
+		\phantomsection%
+		\addcontentsline{toc}{section}{#1}%
+	}%
+}
+
+% Adds a dot after section numbers in section titles.
+\titlelabel{\thetitle.\space}
+
+\providecommand{\bookseries}{The Lovesickness of Men}
+\providecommand{\bookvolume}{Volume I}
+\providecommand{\booktitle}{How to Deal With Women}
+\providecommand{\booksubtitle}{Points About a Female Behavioral Profile in Romantic Relationships With Men}
+
+\providecommand{\citationdata}{%
+	\centering%
+	\textbf{Citation data:} \\
+	\raggedright%
+	ALITA, Nessahan (2005). \booktitle : \booksubtitle. In: \underline{\bookseries \space - \bookvolume.} Independent virtual edition of 2008.%
+}
+
+\providecommand{\summary}{
+	\centering%
+	\textbf{Summary:} \\
+	\raggedright%
+	The art of dealing with women in love requires from men an appropriate internal state, that allows him to resist female charm and fascination, and a strategical knowledge, that allows him to dismantle love tricks and attempts of making him fall in love.
+}
+
+\providecommand{\keywords}{%
+	\centering%
+	\textbf{Keywords:} \\
+	female manipulative ruses - emotional defense - lovesickness - passion - masculinity%
+}
+
+\title{%
+	% Large series and volume in bold and small caps
+	\Large \textbf{\textsc{\bookseries \space - \bookvolume}} \\
+	\hfill \break%
+	%
+	% Huge title in bold
+	\huge \textbf{\booktitle} \\
+	\hfill \break%
+	%
+	% Slightly large subtitle in bold
+	\large \textbf{\booksubtitle} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%	
+	% Small author's name in bold
+	\small \textbf{By Nessahan Alita in March 2005} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%
+	\citationdata \\
+	\hfill \break%
+	%
+	\summary \\
+	\hfill \break%
+	%
+	\keywords%
+}
+\date{}
+\author{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\justifying
+
+\include{warning}
+
+\normalsize
+\tableofcontents
+
+\include{0-introduction}
+\include{chapter-1}
+\include{chapter-2}
+\include{chapter-3}
+\include{chapter-4}
+\include{chapter-5}
+\include{chapter-27}
+
+\end{document}
