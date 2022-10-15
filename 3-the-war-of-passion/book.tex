@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{geometry}
+
+\setlength\parskip{1em plus 0.1em minus 0.2em}
+%\setlength\parindent{0pt}
+
+\geometry{a4paper, top=6em, bottom=6em, left=6em, right=6em}
+
+% Defines the distance between each line in the TOC.
+\setlength{\cftbeforesecskip}{8pt}
+
+% Sets the indentation between section number and title in the TOC.
+\cftsetindents{section}{0em}{2em}
+
+% Adds a row of dots filling the space in the TOC.
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Adds a dot after section numbers in the TOC.
+\renewcommand{\cftsecaftersnum}{.}
+
+% Makes an unnumbered section and adds it to the TOC.
+\newcommand{\unnumberedsection}[1]{%
+	\section*{#1%
+		\phantomsection%
+		\addcontentsline{toc}{section}{#1}%
+	}%
+}
+
+% Adds a dot after section numbers in section titles.
+\titlelabel{\thetitle.\space}
+
+\providecommand{\bookseries}{The Lovesickness of Men}
+\providecommand{\bookvolume}{Volume III}
+\providecommand{\booktitle}{The War of Passion}
+\providecommand{\booksubtitle}{Tricks and deceitful tactics of women in love}
+
+\providecommand{\citationdata}{%
+	\centering%
+	\textbf{Citation data:} \\
+	\raggedright%
+	ALITA, Nessahan (2005). \bookseries : \booktitle \space (\booksubtitle). Second independent virtual edition.%
+}
+
+\providecommand{\keywords}{%
+	\centering%
+	\textbf{Keywords:} \\
+	sexual attraction - romantic relationships - emotional defense%
+}
+
+\title{%
+	% Large series and volume in bold
+	\Large \textbf{\bookseries \space - \bookvolume} \\
+	\hfill \break%
+	%
+	% Huge title in bold
+	\huge \textbf{\booktitle} \\
+	\hfill \break%
+	%
+	% Slightly large subtitle in bold
+	\large \textbf{\booksubtitle} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%	
+	% Small author's name in bold
+	\small \textbf{By Nessahan Alita} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%
+	\citationdata \\
+	\hfill \break%
+	%
+	\keywords%
+}
+\date{}
+\author{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+
+\justifying
+
+\include{warning}
+
+\normalsize
+\tableofcontents
+
+\include{0-introduction}
+\include{1-the-illogicality}
+\include{2-the-pretenses-of-misunderstanding}
+\include{3-the-transfer-of-decision-making}
+\include{4-the-main-psychological-hell}
+\include{5-the-attraction-for-cruelty}
+\include{6-the-thwarted-expectations}
+\include{7-how-not-to-fall-in-love}
+\include{8-cornering-decisions}
+\include{9-the-importance-of-not-becoming-polarized}
+\include{10-the-annoying-provocations}
+\include{11-the-female-vices-and-weaknesses}
+\include{12-the-ideal-masculine-profile}
+\include{13-a-violent-war-of-nerves}
+\include{14-getting-them-to-reveal-themselves}
+\include{15-the-pursuit-of-continuity-makes-them-flirt}
+\include{16-a-way-to-reverse-the-continuity}
+\include{conclusions}
+
+\end{document}
