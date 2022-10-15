@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{bold-extra}
+
+\setlength\parskip{1em plus 0.1em minus 0.2em}
+%\setlength\parindent{0pt}
+
+\geometry{a4paper, top=6em, bottom=6em, left=6em, right=6em}
+
+% Defines the distance between each line in the TOC.
+\setlength{\cftbeforesecskip}{8pt}
+
+% Sets the indentation between section number and title in the TOC.
+\cftsetindents{section}{0em}{2em}
+
+% Adds a row of dots filling the space in the TOC.
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% Adds a dot after section numbers in the TOC.
+\renewcommand{\cftsecaftersnum}{.}
+
+% Makes an unnumbered section and adds it to the TOC.
+\newcommand{\unnumberedsection}[1]{%
+	\section*{#1%
+		\phantomsection%
+		\addcontentsline{toc}{section}{#1}%
+	}%
+}
+
+% Adds a dot after section numbers in section titles.
+\titlelabel{\thetitle.\space}
+
+\providecommand{\bookseries}{The Lovesickness of Men}
+\providecommand{\bookvolume}{Volume II}
+\providecommand{\booktitle}{The Profane Feminine}
+\providecommand{\booksubtitle}{Thoughts on a Side of Women that Nobody Wants to Face}
+
+\providecommand{\citationdata}{%
+	\centering%
+	\textbf{Citation data:} \\
+	\raggedright%
+	ALITA, Nessahan (2005). \booktitle : \booksubtitle. In: \underline{\bookseries \space - \bookvolume.} Independent virtual edition of 2008.%
+}
+
+\providecommand{\summary}{
+	\centering%
+	\textbf{Summary:} \\
+	\raggedright%
+	Women have a sacred side and a profane side. Their profane side consists of applying their emotional intelligence for selfish ends in the field of love, aimed at receiving from men as much love as they can while they reciprocate the smallest possible amount of it.
+}
+
+\providecommand{\keywords}{%
+	\centering%
+	\textbf{Keywords:} \\
+	romantic relationships - emotional abuse - gender subject - sexuality%
+}
+
+\title{%
+	% Large series and volume in bold
+	\Large \textbf{\textsc{\bookseries \space - \bookvolume}} \\
+	\hfill \break%
+	%
+	% Huge title in bold
+	\huge \textbf{\booktitle} \\
+	\hfill \break%
+	%
+	% Slightly large subtitle in bold
+	\large \textbf{\booksubtitle} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%	
+	% Small author's name in bold
+	\small \textbf{By Nessahan Alita} \\
+	\hfill \break%
+	\hfill \break%
+	\hfill \break%
+	%
+	\citationdata \\
+	\hfill \break%
+	%
+	\summary \\
+	\hfill \break%
+	%
+	\keywords%
+}
+\date{}
+\author{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+\justifying
+
+\include{warning}
+
+\normalsize
+\tableofcontents
+
+\include{0-introduction}
+\include{1-the-danger-of-taking-it-the-wrong-way}
+\include{2-why-dont-women-look-at-you}
+\include{3-the-privileges}
+\include{4-mothers-wives-and-daughters}
+\include{5-why-are-they-the-opposite-of-what-they-confess}
+\include{6-the-capricious-judgments}
+\include{7-the-value-of-silence}
+\include{8-the-duplicity-of-feelings}
+\include{9-shattering-the-little-emotional-hell}
+\include{about-the-author}
+
+\end{document}
